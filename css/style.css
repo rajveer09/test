@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(214, 214, 221);
+}
+
+/* left-section  */
+
+#toggle{
+    position: fixed;
+    top: 8px;
+    left: 206px;
+    width: 52px;
+    height: 38px;
+    background: #000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#toggle::before{
+    content: '';
+    position:absolute;
+    width:28px;
+    height: 2px;
+    background: #fff;
+    color: #fff;
+    transform:translateY(-5px);
+    transition: 0.2s;
+}
+
+#toggle::after{
+    content: '';
+    position:absolute;
+    width:28px;
+    height: 2px;
+    background: #fff;
+    color: #fff;
+    transform:translateY(5px);
+    transition: 0.2s;
+}
+
+#toggle.active::before{
+    transform: translate(0px) rotate(45deg);
+}
+
+#toggle.active::after{
+    transform: translate(0px) rotate(-45deg);
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 280px;
+    height: 100vh;
+    background-color:#fff;
+    transition: 0.5s;
+}
+
+#sidebar.active{
+    left: -300px;
+}
+
+#sidebar ul{
+    position: relative;
+    margin-top: 50px;
+}
+
+#sidebar ul li{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+#sidebar ul li:hover{
+    background-color: gray;
+}
+
+#sidebar ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+.header-img img{
+    border-radius: 100%;
+    border: 1px solid #000;
+    width: 5rem;
+    height: 5rem;
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 52px;
+}
+
+.header-text{
+    margin-left: 10px;
+    color: navy;
+}
+
+
+/* center-section  */
+
+.center{
+    max-width: 800px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+
+.center h1{
+    padding: 3rem 3rem;
+}
+
+.center .sales{
+    width: 700px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.center .subs{
+    width: 700px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 0 auto;
+    position: relative;
+    top: 2rem;
+}
+
+.sales h4{
+    margin-left: 3rem;
+}
+
+
+/* right-section  */
+
+.right-side{
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 280px;
+    height: 100vh;
+    background-color:#fff;
+    transition: 0.5s;
+}
+
+.right-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.right-head .right-img img{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 6px;
+}
+
+.right-down{
+    padding: 20px 20px;
+}
+
+.right-down h2{
+    margin-bottom: 10px;
+}
+
