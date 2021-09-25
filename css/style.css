@@ -188,11 +188,13 @@ body{
         position: relative;
         top: 5rem;
     right: 0px;
-    width: 380px;
-    height: 50vh;
+    width: 366px;
+    height: 70vh;
     background-color:#fff;
     transition: 0.5s;
     text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
     }
 
     #sidebar{
